@@ -47,7 +47,7 @@ jobs:
       # 执行检查
       - name: 'IPTV检查'
         #run: /opt/hostedtoolcache/node/14.18.3/x64/bin/iptv-checker cn1080.m3u -o cn_1080
-        run: mkdir cn_1080; cp cn1080.m3u cn_1080/online.m3u
+        run: cp cn1080.m3u cn_1080/online.m3u
 
 
       - name: '移动iptv-checker检查结果'
