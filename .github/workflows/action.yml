@@ -47,8 +47,8 @@ jobs:
       # TODO: 用更好的方式获取iptv-checker path
       # 执行检查
       - name: 'IPTV检查'
-        run: /opt/hostedtoolcache/node/14.18.3/x64/bin/iptv-checker cn1080.m3u -o cn_1080
-        #run: cp cn1080.m3u cn_1080/online.m3u
+        #run: /opt/hostedtoolcache/node/14.18.3/x64/bin/iptv-checker cn1080.m3u -o cn_1080
+        run: cp cn1080.m3u cn_1080/online.m3u
 
 
       - name: '移动iptv-checker检查结果'
