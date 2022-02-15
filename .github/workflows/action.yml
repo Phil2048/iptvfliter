@@ -1,6 +1,7 @@
 name: 'GitHub IPTV 1080 Bot'
 
 on:
+  workflow_dispatch:
   push:
     # push 到main分支时触发
     branches: [main]
