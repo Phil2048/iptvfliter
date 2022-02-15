@@ -25,15 +25,15 @@ jobs:
           node-version: '14.18.3'
 
       - name: 安装ffmpeg
-        uses: FedericoCarboni/setup-ffmpeg@v1
+        #uses: FedericoCarboni/setup-ffmpeg@v1
 
       - name: '安装IPTV filter'
-        run: npm install -g iptv-checker
+        #run: npm install -g iptv-checker
 
       - name: '获取m3u列表'
         #run: wget https://iptv-org.github.io/iptv/countries/cn.m3u 2>/dev/null -O cn.m3u
         run: wget https://raw.githubusercontent.com/iptv-org/iptv/master/channels/cn.m3u 2>/dev/null -O cn.m3u
-
+        run: wget https://kaigedong.github.io/cnm3u/cn1080.m3u 2>/dev/null -O /cn_1080/cn1080.m3u
       # 执行更新代码
       - name: 'Update cn m3u'
         run: echo "#EXTM3U" > cn1080.m3u
@@ -52,7 +52,9 @@ jobs:
 
 
       - name: '移动iptv-checker检查结果'
-        run: mv cn_1080/online.m3u cn_1080/cn1080.m3u
+        run: mv cn_1080/online.m3u cn_1080/cnsports.m3u
+        run: cp cn_1080/cnsports.m3u cn_1080/cnall.m3u
+        run: cat cn_1080/cn1080.m3u >> cnall.m3u
 
       - name: 'Push branch'
         uses: crazy-max/ghaction-github-pages@v2
