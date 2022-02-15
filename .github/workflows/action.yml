@@ -34,7 +34,8 @@ jobs:
         #run: wget https://iptv-org.github.io/iptv/countries/cn.m3u 2>/dev/null -O cn.m3u
         run: ｜ 
           wget https://raw.githubusercontent.com/iptv-org/iptv/master/channels/cn.m3u 2>/dev/null -O cn.m3u
-          wget https://kaigedong.github.io/cnm3u/cn1080.m3u 2>/dev/null -O kai.m3u
+          #wget https://kaigedong.github.io/cnm3u/cn1080.m3u 2>/dev/null -O kai.m3u
+          wget https://iptv-org.github.io/iptv/countries/cn.m3u 2>/dev/null -O kai.m3u
       # 执行更新代码
       - name: 'Update cn m3u'
         run: echo "#EXTM3U" > cn1080.m3u
