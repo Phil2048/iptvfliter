@@ -58,7 +58,7 @@ jobs:
           mv cn_1080/online.m3u cn_1080/cnsports.m3u
           mv kai.m3u cn_1080/kai.m3u
           cp cn_1080/cnsports.m3u cn_1080/cnall.m3u
-          cat cn_1080/kai.m3u >> cnall.m3u
+          cat cn_1080/kai.m3u >> cn_1080/cnall.m3u
 
       - name: 'Push branch'
         uses: crazy-max/ghaction-github-pages@v2
